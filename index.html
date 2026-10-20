@@ -42,24 +42,61 @@
             <button class=" border border-gray-600 bg-slate-400 px-2 cursor-pointer rounded-xl">4-4-2 </button>
         </div>
     </header>
-    
-<section class=" max-w-7xl flex h-screen">
-<aside class="w-80 bg-slate-700 border border-slate-800 p-4 ">
-    
-    <button class="  text-white font-bold bg-green-400  px-17 py-4 justify-center "> +Ajouter un joueur</button>
-     <div class=" flex items-center justify-between p-4">
-        <h3 class="text-white font-bold text-base">Effectif</h3>
-        <span bg-slate-700 text-white  >1 joueur(s)</span>
 
-        </div>
-</aside>
-</section>
+    <section class=" max-w-7xl flex h-screen">
+        <aside class="w-80 bg-slate-700 border border-slate-800 p-4 ">
+
+            <button class="  text-white font-bold bg-green-400  px-17 py-4 justify-center rounded-md cursor-pointer">
+                +Ajouter un joueur</button>
+            <div class=" flex items-center justify-between p-4">
+                <h3 class="text-white font-bold ">Effectif</h3>
+                <span class="text-white bg-slate-800 text-ts px-1 py-0.5 cursor-pointer rounded font-semibold ">1
+                    joueur(s)</span>
+            </div>
+            <p class=" text-gray-400 text-base leading-relaxed ">Cliquez sur un joueur placé pour voir sa case sur le
+                terrain. ✏️ pour modifier, 🗑️ pour supprimer.</p>
+            <div class="bg-slate-500 border border-slate-900 rounded-xl p-4 w-full ">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center space-x-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-slate-700 text-slate-300 text-xs font-bold flex items-center justify-center border border-slate-600">
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm leading-light">bono</h4>
+                            <span class="text-slate-400 text-sm"> Gardien</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3 text-slate-400 text-sm">
+                        <button class="hover: text-amber-500 translation ">✏️</button>
+                        <button class="hover: text-amber-500 translation ">🗑️ </button>
+                    </div>
+                </div>
+
+                <select
+                    class="w-full bg-amber-500 text-white text-xs rounded=lg border border-slate-700 p-2.5  outline-none cursor-pointer">
+                    <option value="GB" selected>GB - Gardien</option>
+                    <option value="DG">DG - Défenseur gauche</option>
+                    <option value="DC1">DC - Défenseur central 1</option>
+                    <option value="DC2">DC - Défenseur central 2</option>
+                    <option value="DD">DD - Défenseur droit</option>
+                    <option value="MG">MG - milieu gauche</option>
+                    <option value="MC">MC - Défenseur droit</option>
+                    <option value="MD">MD - milieu droit</option>
+                    <option value="BU">BU - Buteur 1</option>
+                    <option value="BU">BU - Buteur 2</option>
+                </select>
+            </div>
+
+            </div>
+
+        </aside>
+    </section>
 
 
-</div>
+    </div>
 
 
-   
+
 </body>
 
 </html>
