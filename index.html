@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/src/style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css">
 
 
 </head>
@@ -38,62 +38,162 @@
         </nav>
         <div class="flex  items-center gap-3 ">
             <input type="text">
-            <h1>schema</h1>
-            <button class=" border border-gray-600 bg-slate-400 px-2 cursor-pointer rounded-xl">4-4-2 </button>
+            <h1>schéma</h1>
+            <button class=" border border-gray-600 bg-slate-400 px-2 cursor-pointer rounded-xl">3-4-3 </button>
         </div>
     </header>
-
-    <section class=" max-w-7xl flex h-screen">
-        <aside class="w-90 bg-slate-700 border border-slate-800 p-4 ">
-            <button class="  text-white font-bold bg-green-400  px-22 py-3 justify-center rounded-md cursor-pointer">
-                +Ajouter un joueur</button>
-            <div class=" flex items-center justify-between p-3">
-                <h3 class="text-white font-bold ">Effectif</h3>
-                <span class="text-white bg-slate-800 text-ts px-2 py-0.5 cursor-pointer rounded font-semibold  ">1
-                    joueur(s)</span>
-            </div>
-            <p class=" text-gray-400 text-sm py-3  ">Cliquez sur un joueur placé pour voir sa case sur le
-                terrain. ✏️ pour modifier, 🗑️ pour supprimer.</p>
-                
-            <div class="bg-slate-500 border border-slate-900 rounded-xl p-4 w-full ">
-                <div class="flex items-center justify-between mb-3">
-                    <div class="flex items-center space-x-3">
-                        <div
-                            class="w-8 h-8 rounded-full bg-slate-700 text-slate-300 text-xs font-bold flex items-center justify-center border border-amber-700">
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold text-sm leading-light">bono</h4>
-                            <span class="text-slate-900 text-sm"> Gardien</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center space-x-3 text-slate-400 text-sm">
-                        <button class="hover: text-amber-500 translation ">✏️</button>
-                        <button class="hover: text-amber-500 translation ">🗑️ </button>
-                    </div>
+    <main>
+        <div class="flex min-h-[calc(100vh-74px)]">
+            <aside class="w-90 bg-slate-700 border border-slate-800 p-4 ">
+                <button
+                    class="  text-white font-bold bg-green-400  px-22 py-3 justify-center rounded-md cursor-pointer">
+                    +Ajouter un joueur</button>
+                <div class=" flex items-center justify-between p-3">
+                    <h3 class="text-white font-bold ">Effectif</h3>
+                    <span class="text-white bg-slate-800 text-ts px-2 py-0.5 cursor-pointer rounded font-semibold  ">1
+                        joueur(s)</span>
                 </div>
+                <p class=" text-gray-400 text-sm py-3  ">Cliquez sur un joueur placé pour voir sa case sur le
+                    terrain. ✏️ pour modifier, 🗑️ pour supprimer.</p>
 
-                <select
-                    class="w-full bg-indigo-950 text-white text-xs border border-slate-700 p-2.5  cursor-pointer ">
-                   <option value="" selected disabled>sur la banc </option>
-                    <option value="GB" >GB - Gardien</option>
-                    <option value="DG">DG - Défenseur gauche</option>
-                    <option value="DC1">DC - Défenseur central 1</option>
-                    <option value="DC2">DC - Défenseur central 2</option>
-                    <option value="DD">DD - Défenseur droit</option>
-                    <option value="MG">MG - milieu gauche</option>
-                    <option value="MC">MC - Défenseur droit</option>
-                    <option value="MD">MD - milieu droit</option>
-                    <option value="BU">BU - Buteur 1</option>
-                    <option value="BU">BU - Buteur 2</option>
-                </select>
+                <div class="bg-slate-500 border border-slate-900 rounded-xl p-4 w-full ">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-3">
+                            <div
+                                class="w-8 h-8 rounded-full bg-slate-700 text-slate-300 text-xs font-bold flex items-center justify-center border border-amber-700">
+                                <h2>1</h2>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm leading-light">bono</h4>
+                                <span class="text-slate-900 text-sm"> Gardien</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 text-slate-400 text-sm">
+                            <button class="hover: text-amber-500 translation ">✏️</button>
+                            <button class="hover: text-amber-500 translation ">🗑️ </button>
+                        </div>
+                    </div>
 
-
+                    <select
+                        class="w-full bg-indigo-950 text-white text-xs border border-slate-700 p-2.5  cursor-pointer ">
+                        <option value="" selected disabled>sur la banc </option>
+                        <option value="GB">GB - Gardien</option>
+                        <option value="DG">DG - Défenseur gauche</option>
+                        <option value="DC1">DC - Défenseur central 1</option>
+                        <option value="DC2">DC - Défenseur central 2</option>
+                        <option value="DD">DD - Défenseur droit</option>
+                        <option value="MG">MG - milieu gauche</option>
+                        <option value="MC">MC - Défenseur droit</option>
+                        <option value="MD">MD - milieu droit</option>
+                        <option value="BU">BU - Buteur 1</option>
+                        <option value="BU">BU - Buteur 2</option>
+                    </select>
+                </div>
+            </aside>
+            <div class="terrain-grid">
+            <div class="cell " id=""></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div id="jr1"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <!-- bono -->
+            <div id="gardien" > 
+                <div
+                                class="w-8 h-8 rounded-full bg-slate-700 text-slate-300 text-xs font-bold flex items-center justify-center border border-amber-700">
+                                <h2>1</h2>
+                            </div>
+                            <span >Gb <strong> bono</strong></span></div> 
+            <div class="cell"></div>
+            <div id="jr2"></div>
+            <div id="jr3"> </div>
+            <div id="jr4"  ></div>
+            <div id="jr5"></div>
+            <div id="jr6"></div>
+            <div id="jr7"> </div>
+            <div id="jr8"></div>
+            <div id="jr9"></div>
+            <div id="jr10"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            </main>
             </div>
-            </div>
-          
-        </aside>
-    </section>
-    </div>
+        
+        
 </body>
 
 </html>
