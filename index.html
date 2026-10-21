@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./style.css">
+    <script src="script.js"></script>
 
 
 </head>
@@ -37,7 +38,6 @@
             </ul>
         </nav>
         <div class="flex  items-center gap-3 ">
-            <input type="text">
             <h1>schéma</h1>
             <button class=" border border-gray-600 bg-slate-400 px-2 cursor-pointer rounded-xl">3-4-3 </button>
         </div>
@@ -46,8 +46,8 @@
         <div class="flex min-h-[calc(100vh-74px)]">
             <aside class="w-90 bg-slate-700 border border-slate-800 p-4 ">
                 <button
-                    class="  text-white font-bold bg-green-400  px-22 py-3 justify-center rounded-md cursor-pointer">
-                    +Ajouter un joueur</button>
+                    class="  text-white bg-green-400  px-20 py-3 justify-center rounded-md cursor-pointer">
+                   <strong> +Ajouter un joueur </strong></button>
                 <div class=" flex items-center justify-between p-3">
                     <h3 class="text-white font-bold ">Effectif</h3>
                     <span class="text-white bg-slate-800 text-ts px-2 py-0.5 cursor-pointer rounded font-semibold  ">1
@@ -91,109 +91,133 @@
                 </div>
             </aside>
             <div class="terrain-grid">
-            <div class="cell " id=""></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div id="jr1"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <!-- bono -->
-            <div id="gardien" > 
-                <div
-                                class="w-8 h-8 rounded-full bg-slate-700 text-slate-300 text-xs font-bold flex items-center justify-center border border-amber-700">
-                                <h2>1</h2>
-                            </div>
-                            <span >Gb <strong> bono</strong></span></div> 
-            <div class="cell"></div>
-            <div id="jr2"></div>
-            <div id="jr3"> </div>
-            <div id="jr4"  ></div>
-            <div id="jr5"></div>
-            <div id="jr6"></div>
-            <div id="jr7"> </div>
-            <div id="jr8"></div>
-            <div id="jr9"></div>
-            <div id="jr10"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            </main>
-            </div>
-        
-        
+                <div class="cell " id=""></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <!-- bono -->
+                <div id="gardien">
+                    <div
+                        class="w-8 h-8 rounded-full bg-slate-700 text-slate-300 text-xs font-bold flex items-center justify-center border border-amber-700">
+                        <h1>1</h1>
+                    </div>
+                    <span> <strong>Gb </strong>
+                        <p>bono </p>
+                    </span>
+                </div>
+                <div class="cell"></div>
+                <div id="jr1"> <span> <strong>DG </strong>
+                        <p>Libre </p>
+                    </span> </div>
+                <div id="jr2"> <span> <strong>Dc </strong>
+                        <p>Libre </p>
+                    </span> </div>
+                <div id="jr3"> <span> <strong>Dc </strong>
+                        <p>Libre </p>
+                    </span></div>
+                <div id="jr4"> <span> <strong>DD </strong>
+                        <p>Libre </p>
+                    </span></div>
+                <div id="jr5"> <span> <strong>MG </strong>
+                        <p>Libre </p>
+                    </span></div>
+                <div id="jr6"> <span> <strong>MC </strong>
+                        <p>Libre </p>
+                    </span></div>
+                <div id="jr7"> <span> <strong>MC </strong>
+                        <p>Libre </p>
+                    </span></div>
+                <div id="jr8"> <span> <strong>MD </strong>
+                        <p>Libre </p>
+                    </span></div>
+                <div id="jr9"> <span> <strong>BU </strong>
+                        <p>Libre </p>
+                    </span></div>
+                <div id="jr10"> <span> <strong>BU </strong>
+                        <p>Libre </p>
+                    </span></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"> </div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+    </main>
+    </div>
+
+
 </body>
 
 </html>
