@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./style.css">
-    <script src="script.js"></script>
+    <script src="tachkila.js" defer></script>
 
 
 </head>
@@ -45,9 +45,68 @@
     <main>
         <div class="flex min-h-[calc(100vh-74px)]">
             <aside class="w-90 bg-slate-700 border border-slate-800 p-4 ">
-                <button
-                    class="  text-white bg-green-400  px-20 py-3 justify-center rounded-md cursor-pointer">
-                   <strong> +Ajouter un joueur </strong></button>
+
+
+                <button id="clik"
+                    class="  text-white bg-green-400  px-20 py-3 justify-center rounded-md cursor-pointer p-4">
+                    <strong> +Ajouter un joueur </strong></button>
+
+                <div id="mymdl" class=" fixed inset-0  hidden items-center justify-center bg-black-500/60 p-4">
+                    <div class="w-full max-w-xl bg-green-400 rounded-xl border-4 border-indigo-600 p-4 ">
+                        <div class="flex justify-between items-center font-bold">
+                            <strong>Ajouter un joueur</strong>
+                            <button id="fermer" class="text-2xl leading-none text-slate-400 hover:text-white">
+                                &times;</button>
+                        </div>
+                        <label for="nom">Nom complet</label><br>
+                        <input type="text" id="fname" placeholder="Ex.Ayoub Arbaoui" class=" border border-amber-700">
+                        <fieldset class="mb-3 mt-3">
+                            <legend>
+                                <p>Poste
+                            </legend>
+
+                            <!-- pour  les 4chouix -->
+                            <div class="grid grid-cols-2  gap-3">
+
+
+                                <label
+                                    class="flex cursor-pointer items-center gap-2 rounded-xl border border-slate-700 bg-slate-900 p-3 hover:border-amber-700 text-white">
+                                    <input type="radio" name="poste" value="Gardien">
+                                    <span class="text-amber-500">●</span> Gardien
+                                </label>
+                                <label
+                                    class="flex cursor-pointer items-center gap-2 rounded-xl border border-slate-700 bg-slate-900 p-3 hover:border-blue-500 text-white">
+                                    <input type="radio" name="poste" value="Défenseur">
+                                    <span class="text-blue-500">●</span> Défenseur
+                                </label>
+                                <label
+                                    class=" flex cursor-pointer items-center gap-2 rounded-xl border border-slate-700 bg-slate-900 p-3 hover:border-pink-500 text-white">
+                                    <input type="radio" name="poste" value="Milieu">
+                                    <span class="text-pink-500">●</span>Milieu
+                                </label>
+                                <label
+                                    class=" flex cursor-pointer items-center gap-2 rounded-xl border border-black-800 bg-slate-900 p-3 hover:border-green-500 text-white">
+                                    <input type="radio" name="poste" value="Attaquant ">
+                                    <span class="text-green-500">●</span>Attaquant
+                                </label>
+                            </div>
+                        </fieldset>
+                        <label for="nom">Numéro (1a99)</label><br>
+                        <input type="text" id="fname" placeholder="Ex:02" class=" border border-amber-700">
+                        <div>
+                            <div class="flex justify-end gap-3">
+                                <button id="annuler"
+                                    class="rounded-xl bg-slate-700 px-5 py-3 font-semibold hover:bg-slate-600">
+                                    Annuler
+                                </button>
+                                <button id="ajouter" type="submit"
+                                    class="rounded-xl bg-green-600 px-5 py-3 font-semibold hover:bg-green-700">
+                                    Ajouter
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class=" flex items-center justify-between p-3">
                     <h3 class="text-white font-bold ">Effectif</h3>
                     <span class="text-white bg-slate-800 text-ts px-2 py-0.5 cursor-pointer rounded font-semibold  ">1
