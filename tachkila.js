@@ -24,8 +24,13 @@ annule.addEventListener("click", function () {
    lemodal.classList.add("hidden")
 
 })
-ajout.addEventListener("click", function (event) {
+
+
+ajout.addEventListener("click", function () {
+   let 
+
    
+
 });
 
 
@@ -35,7 +40,7 @@ nom.addEventListener("input", function () {
    const regex = /^[A-Za-zÀ-ÿ]+(?:[ '-][A-Za-zÀ-ÿ]+)*$/;
 
    if (valeur === "") {
-      nomMsg.textContent = " ";
+      nomMsg.textContent = "";
    } else if (!regex.test(valeur)) {
       nomMsg.textContent = "entrez le nom sans chiffres";
    } else {

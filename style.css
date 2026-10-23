@@ -3,15 +3,23 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(9, 1fr);
     gap: 5px;
-    background-color: #8c9aad;
+    
     padding: 15px;
     border-radius: 25px;
-    margin: 50px 80px ;
+   
+    background-image: url("image.png");
+    height: 500px;
+    background-size: 100% 100%;
+   margin-top: 15px;
+  
+    margin-left: 5%;
+    
+    
 }
 
 
 .cell {
-    background-color: #1b2431;
+    /* background-color: #1b2431; */
     border-radius: 6px;
     width: 55px;
     box-sizing: border-box;
