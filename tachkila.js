@@ -127,11 +127,9 @@ ${valeurNumero}
         <option value="BU2">BU - Buteur 2</option>
     </select>
      </div>
-    
+   
      `
-     
      ListeJoueurs.appendChild(carte);
-
 }
 ajout.addEventListener("click", ajouterJoueur);
 
