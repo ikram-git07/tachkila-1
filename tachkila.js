@@ -111,11 +111,11 @@ function ajouterJoueur() {
                         <div class="flex items-center space-x-3">
                             <div
                                 class="w-8 h-8 rounded-full bg-slate-700 text-slate-300 text-xs font-bold flex items-center justify-center border border-amber-700">
-                                <h2>1</h2>
+                                ${valeurNumero}
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-sm leading-light"></h4>
-                                <span class="text-slate-900 text-sm"> Gardien</span>
+                                <h4 class="text-white font-bold text-sm leading-light">${valeurNom}</h4>
+                                <span class="text-slate-900 text-sm">${poste.value}</span>
                             </div>
                         </div>
                         <div class="flex items-center space-x-3 text-slate-400 text-sm">
