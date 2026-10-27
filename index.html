@@ -53,7 +53,7 @@
                     <div class="w-full max-w-md bg-slate-800 rounded-2xl border border-slate-700 p-6 text-white">
                         <div class="flex justify-between items-center mb-5">
                             <strong class="text-xl">Modifier le joueur</strong>
-                            <button id="Fermer-modif"
+                            <button id="Fermer_modif"
                                 class="text-2xl leading-none text-slate-400 hover:text-white">&times;</button>
                         </div>
                         <label for="nom_modif" class="text-sm font-semibold text-slate-400">Nom complet</label>
@@ -75,14 +75,20 @@
                                     <input type="radio" name="poste_modif" value="Milieu">
                                     <span class="text-green-500">●</span> Milieu
                                 </label>
+                                <label class="flex cursor-pointer items-center gap-2 rounded-xl bg-slate-900 p-3">
+                                    <input type="radio" name="poste_modif" value="Attaquant">
+                                    <span class="text-red-500">●</span> Attaquant
+                                </label>
+                                
+
                             </div>
                         </fieldset>
                         <label for="numero-modif" class="text-sm font-semibold text-slate-400">Numéro (1 à 99)</label>
-                        <input type="text" id="numero-modif"
+                        <input type="text" id="numero_modif"
                             class="mt-2 w-full rounded-xl border border-slate-700 bg-slate-900 p-3 text-white outline-none focus:border-blue-500">
                         <p id="numero_modif_msg" class="text-red-500 text-sm"></p>
                         <div class="flex justify-end gap-3 mt-6">
-                            <button id="annuler-modif"
+                            <button id="annuler_modif"
                                 class="rounded-xl bg-slate-600 px-5 py-2 font-semibold hover:bg-slate-500">Annuler</button>
                             <button id="enregistrer"
                                 class="rounded-xl bg-green-400 bg-green-600 px-5 py-2 font-semibold hover:bg-green-700">Enregistrer</button>
@@ -134,6 +140,7 @@
                                     <span class="text-green-500">●</span>Attaquant
                                 </label>
 
+
                             </div>
                             <p id="poste-msg" class="text-red-500 text-sm"></p>
                         </fieldset>
@@ -161,8 +168,7 @@
                         joueur(s)</span>
                 </div>
                 <p class=" text-gray-400 text-sm py-3  ">Cliquez sur un joueur placé pour voir sa case
-                    sur le
-                    terrain. ✏️ pour modifier, 🗑️ pour supprimer.</p>
+                    sur le terrain. ✏️ pour modifier, 🗑️ pour supprimer.</p>
                 <div id="liste-joueurs">
                 </div>
             </aside>

@@ -88,7 +88,7 @@ function afficher() {
                </div>
                </div>
             <div class="flex items-center space-x-3 text-slate-400 text-sm">
-               <button  onclick="modifier("${i})" class="cursor-pointer" >✏️</button>
+               <button  onclick="modifier(${i})" class="cursor-pointer" >✏️</button>
                <button onclick="supprimer(${i})" class="cursor-pointer" >🗑️</button>
             </div>
          </div >
