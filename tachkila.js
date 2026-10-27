@@ -71,6 +71,19 @@ numero.addEventListener("input", function () {
 const ajout = document.querySelector("#ajouter")
 let joueurs = [];
 let indexmodif = null;
+charger();
+ function sauvegarder(){
+   localStorage.setItem("joueurs", JSON.stringify(joueurs));
+ }
+ function charger(){
+   const donnees = localStorage.getItem("joueurs");
+   if (donnees !== null){
+      joueurs = JSON.parse(donnees);
+   }
+ }
+
+
+
 function afficher() {
    ListeJoueurs.innerHTML = "";
    for (let i = 0; i < joueurs.length; i++) {
@@ -153,6 +166,7 @@ function ajouterJoueur() {
       numero: valeurNumero,
       poste: poste.value
    });
+   sauvegarder();
    afficher();
 
    nom.value = "";
@@ -176,6 +190,7 @@ const numero_modif_msg = document.querySelector("#numero_modif_msg");
 
 function supprimer(i) {
    joueurs.splice(i, 1);
+   sauvegarder();
    afficher();
 }
 function modifier(i) {
@@ -224,9 +239,11 @@ enregistrer.addEventListener("click", function () {
    joueurs[indexmodif].nom = nouveau_nom;
    joueurs[indexmodif].numero = nouveau_numero;
    joueurs[indexmodif].poste = nouveau_poste.value;
+   sauvegarder();
    afficher();
    fermer_le_modal_modif();
 });
+afficher();
 
 
 

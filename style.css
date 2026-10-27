@@ -153,3 +153,48 @@
      align-items: center;
      padding-left: 40px;
 }
+
+
+
+
+
+
+@media (max-width: 1023px){
+    .terrain-grid{
+        width: 95%;
+        height: 450px;
+        margin: 15px auto;
+        padding: 8px;
+        gap: 3px;
+    }
+    .cell{
+        width: auto;
+        height: auto;
+    }
+     #jr1, #jr2, #jr3, #jr4, #jr5, #jr6, #jr7, #jr8, #jr9, #jr10 {
+        padding-left: 4px;
+        font-size: 11px;
+    }
+    #gardien {
+        font-size: 11px;
+        padding: 3px;
+
+    }
+}
+
+
+
+@media (max-width: 639px){
+    .terrain-grid {
+        height: 380px;
+        gap: 2px;
+    }
+      #jr1, #jr2, #jr3, #jr4, #jr5, #jr6, #jr7, #jr8, #jr9, #jr10 {
+        padding-left: 2px;
+        font-size: 9px;
+    }
+    #gardien {
+        font-size: 9px;
+        gap: 3px;
+    }
+}
