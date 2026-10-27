@@ -46,11 +46,14 @@
                 <button id="clik"
                     class="  text-white bg-green-400  px-20 py-3 justify-center rounded-md cursor-pointer p-4">
                     <strong> +Ajouter un joueur </strong></button>
+
+
+
                 <div id="mdl_modif" class="fixed inset-0 hidden items-center justify-center bg-black/60 p-4">
                     <div class="w-full max-w-md bg-slate-800 rounded-2xl border border-slate-700 p-6 text-white">
                         <div class="flex justify-between items-center mb-5">
                             <strong class="text-xl">Modifier le joueur</strong>
-                            <button id="fermer-modif"
+                            <button id="Fermer-modif"
                                 class="text-2xl leading-none text-slate-400 hover:text-white">&times;</button>
                         </div>
                         <label for="nom_modif" class="text-sm font-semibold text-slate-400">Nom complet</label>
@@ -86,24 +89,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                 <div id="mymdl" class=" fixed inset-0  hidden items-center justify-center bg-black-500/60 p-4">
                     <div class="w-full max-w-xl bg-green-400 rounded-xl border-4 border-indigo-600 p-4 ">
@@ -178,43 +163,7 @@
                 <p class=" text-gray-400 text-sm py-3  ">Cliquez sur un joueur placé pour voir sa case
                     sur le
                     terrain. ✏️ pour modifier, 🗑️ pour supprimer.</p>
-
-                <div class="bg-slate-500 border border-slate-900 rounded-xl p-4 w-full ">
-                    <div class="flex items-center justify-between mb-3">
-                        <div class="flex items-center space-x-3">
-                            <div
-                                class="w-8 h-8 rounded-full bg-slate-700 text-slate-300 text-xs font-bold flex items-center justify-center border border-amber-700">
-                                <h2>1</h2>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold text-sm leading-light">bono</h4>
-                                <span class="text-slate-900 text-sm"> Gardien</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-3 text-slate-400 text-sm">
-                            <button id="modif" class="hover: text-amber-500 translation cursor-pointer  ">✏️</button>
-                            <button id="supp" class="hover: text-amber-500 translation cursor-pointer ">🗑️
-                            </button>
-                        </div>
-                    </div>
-
-                    <select
-                        class="w-full bg-indigo-950 text-white text-xs border border-slate-700 p-2.5  cursor-pointer ">
-                        <option value="" selected disabled>sur la banc </option>
-                        <option value="GB">GB - Gardien</option>
-                        <option value="DG">DG - Défenseur gauche</option>
-                        <option value="DC1">DC - Défenseur central 1</option>
-                        <option value="DC2">DC - Défenseur central 2</option>
-                        <option value="DD">DD - Défenseur droit</option>
-                        <option value="MG">MG - milieu gauche</option>
-                        <option value="MC">MC - Défenseur droit</option>
-                        <option value="MD">MD - milieu droit</option>
-                        <option value="BU">BU - Buteur 1</option>
-                        <option value="BU">BU - Buteur 2</option>
-                    </select>
-                </div>
                 <div id="liste-joueurs">
-
                 </div>
             </aside>
             <div class="terrain-grid">

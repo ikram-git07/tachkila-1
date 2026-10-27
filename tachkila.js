@@ -88,8 +88,8 @@ function afficher() {
                </div>
                </div>
             <div class="flex items-center space-x-3 text-slate-400 text-sm">
-               <button class="modif cursor-pointer" data-index="${i}">✏️</button>
-               <button class="supp cursor-pointer" data-index="${i}">🗑️</button>
+               <button  onclick="modifier("${i})" class="cursor-pointer" >✏️</button>
+               <button onclick="supprimer(${i})" class="cursor-pointer" >🗑️</button>
             </div>
          </div >
          <select class="w-full bg-indigo-950 text-white text-xs border border-slate-700 p-2.5 cursor-pointer">
@@ -107,9 +107,7 @@ function afficher() {
          </select>
       `;
       ListeJoueurs.appendChild(carte);
-               
-
-}
+   }
 }
 
 
@@ -147,7 +145,7 @@ function ajouterJoueur() {
    } else {
       posteMsg.textContent = "";
    }
-   if (valeurNom === ""|| !regexNom.test(valeurNom) || valeurNumero === "" || !regexNumero.test(valeurNumero) || poste === null) {
+   if (valeurNom === "" || !regexNom.test(valeurNom) || valeurNumero === "" || !regexNumero.test(valeurNumero) || poste === null) {
       return;
    }
    joueurs.push({
@@ -168,7 +166,7 @@ ajout.addEventListener("click", ajouterJoueur);
 
 
 const mdl_modif = document.querySelector("#mdl_modif");
-const fermer_modif = document.querySelector("#fermer_modif");
+const fermer_modif = document.querySelector("#Fermer_modif");
 const annuler_modif = document.querySelector("#annuler_modif");
 const enregistrer = document.querySelector("#enregistrer");
 const nom_modif = document.querySelector("#nom_modif");
@@ -176,53 +174,59 @@ const nom_modif_msg = document.querySelector("#nom_modif_msg");
 const numero_modif = document.querySelector("#numero_modif");
 const numero_modif_msg = document.querySelector("#numero_modif_msg");
 
-function supprimer(i){
-   joueurs.splice(i , 1);
+function supprimer(i) {
+   joueurs.splice(i, 1);
    afficher();
 }
-function modifier(i){
+function modifier(i) {
    indexmodif = i;
-     nom_modif.value = joueurs[i].nom;
+   nom_modif.value = joueurs[i].nom;
    numero_modif.value = joueurs[i].numero;
    document.querySelector('input[name="poste_modif"][value="' + joueurs[i].poste + '"]').checked = true;
-    
+
 
    nom_modif_msg.textContent = "";
    numero_modif_msg.textContent = "";
    mdl_modif.classList.remove("hidden");
-   mdl_modif.classList.add("flex"); 
+   mdl_modif.classList.add("flex");
 }
-function fermer_le_modal_modif(){
+function fermer_le_modal_modif() {
    mdl_modif.classList.remove("flex");
-   mdl_modif.classList.remove("hidden");
+   mdl_modif.classList.add("hidden");
 }
-fermer_modif,addEventListener("click", fermer_le_modal_modif);
+fermer_modif.addEventListener("click", fermer_le_modal_modif);
 annuler_modif.addEventListener("click", fermer_le_modal_modif);
 
-enregistrer.addEventListener("click"), function (){
+enregistrer.addEventListener("click", function () {
    const nouveau_nom = nom_modif.value.trim();
-      const nouveau_numero = numero_modif.value.trim();
-      const nouveau_poste = document.querySelector('input[name="poste_modif"]:checked');
-       let valide = true;
+   const nouveau_numero = numero_modif.value.trim();
+   const nouveau_poste = document.querySelector('input[name="poste_modif"]:checked');
+   let valide = true;
 
-if( !regexNom.test(nouveau_nom)){
-    nom_modif_msg.textContent = "Entrez un nom valide";
-    valide = false;
+   if (!regexNom.test(nouveau_nom)) {
+      nom_modif_msg.textContent = "Entrez un nom valide";
+      valide = false;
 
-}else {
-   nom_modif_msg.textContent = "";
+   } else {
+      nom_modif_msg.textContent = "";
 
-}
-if( !regexNumero.test(nouveau_numero)){
-   numero_modif_msg.textContent = "Entrez un nbr entre 1 et 99";
-   valide = false;
-   return;
-}else {
-    numero_modif_msg.textContent = "";
-}
-if (valide === false){
-   return;
-}
-}
+   }
+   if (!regexNumero.test(nouveau_numero)) {
+      numero_modif_msg.textContent = "Entrez un nbr entre 1 et 99";
+      valide = false;
+     
+   } else {
+      numero_modif_msg.textContent = "";
+   }
+   if (valide === false) {
+      return;
+   }
+   joueurs[indexmodif].nom = nouveau_nom;
+   joueurs[indexmodif].numero = nouveau_numero;
+   joueurs[indexmodif].poste = nouveau_poste.value;
+   afficher();
+   fermer_le_modal_modif();
+});
+
 
 
